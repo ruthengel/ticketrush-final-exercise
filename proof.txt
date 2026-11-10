@@ -1,0 +1,79 @@
+### git worktree list
+C:/רות אנגל/ticketrush/ticketrush            4477fb1 [main]
+C:/רות אנגל/ticketrush/early-access          e31f721 [feature/early-access]
+C:/רות אנגל/ticketrush/hotfix-date           bf0c5e2 [hotfix/date]
+C:/רות אנגל/ticketrush/hotfix-price          909b803 [hotfix/price]
+C:/רות אנגל/ticketrush/hotfix-secret         3c5d338 [hotfix/secret]
+C:/רות אנגל/ticketrush/review-noa            7f7a41f [review/noa-refund]
+C:/רות אנגל/ticketrush/waitlist              27e490e [feature/waitlist]
+
+### git branch -a -vv
++ feature/early-access                           e31f721 (C:/רות אנגל/ticketrush/early-access) Raise club member ticket quota from 4 to 6 per order
++ feature/waitlist                               27e490e (C:/רות אנגל/ticketrush/waitlist) Add joinWaitlist: normalize email, validate, avoid duplicates
++ hotfix/date                                    bf0c5e2 (C:/רות אנגל/ticketrush/hotfix-date) fix: correct concert date in events.js
++ hotfix/price                                   909b803 (C:/רות אנגל/ticketrush/hotfix-price) Revert "perf: faster price formatting"
++ hotfix/secret                                  3c5d338 (C:/רות אנגל/ticketrush/hotfix-secret) Stop tracking js/config.js (contains API key); add config.example.js and gitignore
+* main                                           4477fb1 [origin/main: ahead 11] Merge branch 'feature/waitlist'
++ review/noa-refund                              7f7a41f (C:/רות אנגל/ticketrush/review-noa) [origin/review/noa-refund] Add code review of noa/refund: request changes
+  remotes/origin/HEAD                            -> origin/main
+  remotes/origin/dana/promo                      851f3d9 test: add student discount tests
+  remotes/origin/engel-ruth/feature/early-access e31f721 Raise club member ticket quota from 4 to 6 per order
+  remotes/origin/engel-ruth/feature/waitlist     27e490e Add joinWaitlist: normalize email, validate, avoid duplicates
+  remotes/origin/engel-ruth/hotfix/date          bf0c5e2 fix: correct concert date in events.js
+  remotes/origin/engel-ruth/hotfix/price         909b803 Revert "perf: faster price formatting"
+  remotes/origin/engel-ruth/hotfix/secret        3c5d338 Stop tracking js/config.js (contains API key); add config.example.js and gitignore
+  remotes/origin/engel-ruth/main                 4477fb1 Merge branch 'feature/waitlist'
+  remotes/origin/engel-ruth/result               25f3983 result engel-ruth 90/100
+  remotes/origin/engel-ruth/review/noa-refund    7f7a41f Add code review of noa/refund: request changes
+  remotes/origin/main                            3c5d338 Stop tracking js/config.js (contains API key); add config.example.js and gitignore
+  remotes/origin/noa/refund                      023da64 test: refund tests
+  remotes/origin/review/noa-refund               7f7a41f Add code review of noa/refund: request changes
+  remotes/origin/ruth/fixes                      babaf85 wip: try new fonts
+
+### git log --graph --oneline --all -n 80
+* 25f3983 (origin/engel-ruth/result) result engel-ruth 90/100
+*   4477fb1 (HEAD -> main, origin/engel-ruth/main) Merge branch 'feature/waitlist'
+|\  
+| * 27e490e (origin/engel-ruth/feature/waitlist, feature/waitlist) Add joinWaitlist: normalize email, validate, avoid duplicates
+* |   ddb3e08 Merge branch 'feature/early-access'
+|\ \  
+| * | e31f721 (origin/engel-ruth/feature/early-access, feature/early-access) Raise club member ticket quota from 4 to 6 per order
+| * | f617c37 Add student checkbox to purchase page and pass isStudent to calcTotal
+| * |   5f7729e Merge remote-tracking branch 'origin/dana/promo' into feature/early-access
+| |\ \  
+| | * | 851f3d9 (origin/dana/promo) test: add student discount tests
+| | * | 8de387a feat: student discount (15%)
+| | |/  
+| * | 4616f52 Merge branch 'main' into feature/early-access
+| |\| 
+| * | cd29911 Coerce quantity to number in calcTotal so form input works
+| * | 9cc5dc3 Add member early-access pricing: 20% ticket discount and 4-ticket cap
+* | | 3c5d338 (origin/main, origin/engel-ruth/hotfix/secret, origin/HEAD, hotfix/secret) Stop tracking js/config.js (contains API key); add config.example.js and gitignore
+* | | bf0c5e2 (origin/engel-ruth/hotfix/date, hotfix/date) fix: correct concert date in events.js
+| |/  
+|/|   
+| | * 7f7a41f (origin/review/noa-refund, origin/engel-ruth/review/noa-refund, review/noa-refund) Add code review of noa/refund: request changes
+| | * 023da64 (origin/noa/refund) test: refund tests
+| | * e1b59bf feat: refund calculation for cancelled orders
+| |/  
+|/|   
+| | * babaf85 (origin/ruth/fixes) wip: try new fonts
+| | * c6518ec debug: dump state to console
+| | * feece8d WIP: try removing ticket limits
+| | * 3e86961 fix: correct concert date in events.js
+| | * 723651b WIP: new checkout flow (do not merge)
+| |/  
+|/|   
+* | 909b803 (origin/engel-ruth/hotfix/price, hotfix/price) Revert "perf: faster price formatting"
+|/  
+* 6e5b25d feat: friendlier message for empty quantity
+* 9119fe2 fix: typo in hero heading
+* a61f4ad feat: add footer with links
+* 73924c4 perf: faster price formatting
+* 03bd4dd docs: update artist lineup text
+* c44fbf8 feat: add early-access promo banner
+* 62f48b5 (tag: v1.0) feat: purchase page UI
+* f4c58bc feat: payment provider config
+* 2cc7e97 feat: event details data
+* 8a944f6 feat: ticket price calculation with tests
+* ed1b1e9 Initial commit: project skeleton and exercise tooling
