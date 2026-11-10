@@ -1,7 +1,7 @@
 // לוגיקת הממשק של דף הרכישה
 (function () {
   var el = function (id) { return document.getElementById(id); };
-  var qtyInput = el('qty'), memberBox = el('member'), totalEl = el('total');
+  var qtyInput = el('qty'), memberBox = el('member'), studentBox = el('student'), totalEl = el('total');
   var msgEl = el('msg'), buyBtn = el('buy');
 
   // פרטי ההופעה (מתוך events.js)
@@ -11,7 +11,7 @@
     var qty = Number(qtyInput.value);
     var isMember = memberBox.checked;
     qtyInput.max = maxTickets(isMember);
-    var total = calcTotal(qty, isMember);
+    var total = calcTotal(qty, isMember, studentBox.checked);
     if (total === null || qty < 1) {
       totalEl.textContent = '—';
       msgEl.textContent = qty < 1 ? 'בחרי לפחות כרטיס אחד' : 'כמות לא תקינה להזמנה';
@@ -25,6 +25,7 @@
 
   qtyInput.addEventListener('input', render);
   memberBox.addEventListener('change', render);
+  studentBox.addEventListener('change', render);
   buyBtn.addEventListener('click', function () {
     var ready = typeof CONFIG !== 'undefined' && !!CONFIG.PAYMENT_API_KEY;
     alert(ready ? 'תודה! (הדגמה בלבד – אין תשלום אמיתי)' : 'חסרה הגדרת תשלום (js/config.js)');
