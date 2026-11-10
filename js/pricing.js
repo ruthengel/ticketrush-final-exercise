@@ -2,7 +2,7 @@
 const TICKET_PRICE = 350;        // ILS per ticket
 const SERVICE_FEE = 12;          // ILS service fee per ticket, never discounted
 const MAX_TICKETS = 8;           // max tickets per order (regular customer)
-const MEMBER_MAX_TICKETS = 4;    // max tickets per order (club member)
+const MEMBER_MAX_TICKETS = 6;    // max tickets per order (club member)
 const MEMBER_DISCOUNT = 0.2;     // club member: 20% off ticket price
 const STUDENT_DISCOUNT = 0.15;   // student promo: 15% off ticket price
 
